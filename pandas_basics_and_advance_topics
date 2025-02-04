@@ -1,26 +1,37 @@
-(* This script covers both basic and advanced AI/ML concepts using Pandas and other essential libraries. Here's an overview of what it includes:
+# This script covers both basic and advanced AI/ML concepts using Pandas and other essential libraries.
+# Here's an overview of what it includes:
 
-#Pandas Basics for AI/ML**
-1. Creating and Manipulating DataFrames- Working with structured tabular data.
-2. Reading and Writing CSV Files - Loading and saving datasets.
-3. Data Exploration - Checking data info, statistics, and filtering.
-4. Handling Missing Values - Filling NaN values with mean/median values.
-5. Grouping and Sorting - Aggregating data for better insights.
+# Pandas Basics for AI/ML:
+# 1. Creating and Manipulating DataFrames - Working with structured tabular data.
+# 2. Reading and Writing CSV Files - Loading and saving datasets.
+# 3. Data Exploration - Checking data info, statistics, and filtering.
+# 4. Handling Missing Values - Filling NaN values with mean/median values.
+# 5. Grouping and Sorting - Aggregating data for better insights.
 
-#Advanced AI/ML Topics
-1. Feature Engineering- Creating new features like log transformation.
-2. Dimensionality Reduction - Using PCA to reduce data dimensions.
-3. Clustering- Applying K-Means for unsupervised learning.
-4. Regression Models - Building a Linear Regression model.
-5. Classification Models - Using Random Forest for binary classification.
-6. Deep Learning - Defining a neural network using TensorFlow/Keras.
-7. Natural Language Processing (NLP) - Text vectorization with TF-IDF.
-8. Reinforcement Learning - Setting up an OpenAI Gym environment.
-9. Generative Adversarial Networks (GANs)- Building a GAN generator model.
+# Advanced AI/ML Topics:
+# 1. Feature Engineering - Creating new features like log transformation.
+# 2. Dimensionality Reduction - Using PCA to reduce data dimensions.
+# 3. Clustering - Applying K-Means for unsupervised learning.
+# 4. Regression Models - Building a Linear Regression model.
+# 5. Classification Models - Using Random Forest for binary classification.
+# 6. Deep Learning - Defining a neural network using TensorFlow/Keras.
+# 7. Natural Language Processing (NLP) - Text vectorization with TF-IDF.
+# 8. Reinforcement Learning - Setting up an OpenAI Gym environment.
+# 9. Generative Adversarial Networks (GANs) - Building a GAN generator model.
 
-This repository will help you build a strong AI/ML foundation while also covering state-of-the-arttopics. 
- *)
+# This repository will help you build a strong AI/ML foundation while also covering state-of-the-art topics.
+
 import pandas as pd
+import numpy as np
+from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestClassifier
+import tensorflow as tf
+from tensorflow import keras
+from sklearn.feature_extraction.text import TfidfVectorizer
+import gym
+from tensorflow.keras.layers import Dense, LeakyReLU
 
 # Creating a simple DataFrame
 data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
@@ -92,21 +103,18 @@ df['Salary_Log'] = df['Salary'].apply(lambda x: np.log(x))
 print(df)
 
 # Dimensionality Reduction
-from sklearn.decomposition import PCA
 pca = PCA(n_components=2)
 pca_result = pca.fit_transform(df[['Age', 'Salary']])
 print("\nPCA Reduced Data:")
 print(pca_result)
 
 # Clustering
-from sklearn.cluster import KMeans
 kmeans = KMeans(n_clusters=2)
 df['Cluster'] = kmeans.fit_predict(df[['Age', 'Salary']])
 print("\nK-Means Clustering:")
 print(df)
 
 # Regression Model
-from sklearn.linear_model import LinearRegression
 X = df[['Age']]
 y = df['Salary']
 model = LinearRegression()
@@ -115,7 +123,6 @@ print("\nLinear Regression Coefficients:")
 print(model.coef_, model.intercept_)
 
 # Classification Model
-from sklearn.ensemble import RandomForestClassifier
 y_class = (df['Salary'] > 65000).astype(int)  # Converting Salary to binary class
 clf = RandomForestClassifier()
 clf.fit(X, y_class)
@@ -123,9 +130,6 @@ print("\nRandom Forest Classifier Predictions:")
 print(clf.predict(X))
 
 # Deep Learning
-import tensorflow as tf
-from tensorflow import keras
-
 model = keras.Sequential([
     keras.layers.Dense(64, activation='relu', input_shape=(1,)),
     keras.layers.Dense(1, activation='linear')
@@ -136,7 +140,6 @@ print("\nDeep Learning Model Summary:")
 model.summary()
 
 # Natural Language Processing (NLP)
-from sklearn.feature_extraction.text import TfidfVectorizer
 text_data = ["AI is amazing", "Machine learning is fun", "Deep learning is powerful"]
 vectorizer = TfidfVectorizer()
 X_text = vectorizer.fit_transform(text_data)
@@ -144,14 +147,11 @@ print("\nTF-IDF Vectorized Text Data:")
 print(X_text.toarray())
 
 # Reinforcement Learning
-import gym
 env = gym.make("CartPole-v1")
 print("\nReinforcement Learning Environment:")
 print(env)
 
 # Generative Adversarial Networks (GANs)
-from tensorflow.keras.layers import Dense, LeakyReLU
-
 generator = keras.Sequential([
     Dense(128, activation=LeakyReLU(0.2), input_shape=(100,)),
     Dense(256, activation=LeakyReLU(0.2)),
