@@ -40,7 +40,7 @@ arr_linspace = np.linspace(0, 2, 9)
 print("\nArray using linspace (0 to 2 with 9 values):")
 print(arr_linspace)
 
-# Example: Reshaping an array
+# Ex:Reshaping an array
 reshaped_arr = np.arange(1, 10).reshape(3, 3)
 print("\nReshaped 3x3 array from 1 to 9:")
 print(reshaped_arr)
