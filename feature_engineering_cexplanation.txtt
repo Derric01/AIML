@@ -1,0 +1,23 @@
+1️⃣ Feature Engineering Topics (Basic to Advanced)
+#Basic Techniques
+Handling Missing Data → Mean/Median/Mode Imputation, Forward/Backward Fill
+Encoding Categorical Variables → One-Hot Encoding, Label Encoding, Target Encoding
+Feature Scaling → Standardization (Z-score), Min-Max Scaling, Robust Scaling
+Feature Transformation → Log Transform, Power Transform, Box-Cox Transform
+
+#Intermediate Techniques
+Feature Selection → Correlation Matrix, Mutual Information, Chi-Square Test
+Dimensionality Reduction → PCA (Principal Component Analysis), LDA (Linear Discriminant Analysis)
+Polynomial Features → Generating new features using polynomial combinations of existing features
+
+#Advanced Techniques
+Feature Extraction
+Text Data: TF-IDF, Word2Vec, BERT embeddings
+Image Data: CNN Feature Extraction, Autoencoders
+Time Series Feature Engineering
+Rolling Mean, Lag Features, Seasonal Decomposition
+Interaction Features → Multiplying or adding features to create new relationships
+
+#Feature Selection with ML
+Recursive Feature Elimination (RFE)
+SHAP & LIME for interpretability
