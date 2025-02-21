@@ -1,0 +1,19 @@
+Data Preprocessing & Feature Engineering
+
+Handles missing values with SimpleImputer
+Applies encoding for categorical variables (LabelEncoder, OneHotEncoder)
+Performs feature scaling using StandardScaler
+Generates polynomial features for enhanced learning
+Implements PCA for dimensionality reduction
+AutoML with H2O
+
+Uses H2OAutoML to automate model selection and tuning.
+Quantum Machine Learning (QML)
+
+Implements a simple quantum circuit using PennyLane to explore quantum-enhanced ML.
+Edge AI with TensorFlow Lite
+
+Converts a TensorFlow model into a lightweight format (.tflite) for deployment on edge devices.
+Neural Architecture Search (NAS)
+
+Uses nasbench301 to automate neural network architecture design.
