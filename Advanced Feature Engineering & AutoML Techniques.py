@@ -101,7 +101,7 @@ qnode = qml.QNode(quantum_circuit, device)
 weights = np.array([0.1, 0.2], requires_grad=True)
 print("Quantum Circuit Output:", qnode(weights))
 
-# Edge AI with TensorFlow Lite
+# Edge AI with TensorFlow lite
 converter = tf.lite.TFLiteConverter.from_keras_model(Sequential([Dense(10, activation='relu', input_shape=(X_train.shape[1],))]))
 tflite_model = converter.convert()
 print("Edge AI Model Ready!")
