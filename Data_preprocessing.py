@@ -3,7 +3,7 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler, LabelEncoder, On
 import numpy as np
 
 # Data Preprocessing for AI/ML
-# -----------------------------------
+# ---------------------------------
 
 # 1. Creating a sample dataset
 raw_data = {'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eve'],
