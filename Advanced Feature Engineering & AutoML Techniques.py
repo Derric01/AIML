@@ -69,7 +69,7 @@ df = pd.concat([df, pd.DataFrame(encoded_cities, columns=one_hot_encoder.get_fea
 scaler = StandardScaler()
 df[['Age', 'Salary']] = scaler.fit_transform(df[['Age', 'Salary']])
 
-# Polynomial Features
+# Polynomial Feature
 poly = PolynomialFeatures(degree=2, interaction_only=True)
 X_poly = poly.fit_transform(df.drop(columns=['Purchased']))
 
