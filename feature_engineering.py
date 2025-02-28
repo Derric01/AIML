@@ -22,7 +22,7 @@ df = pd.DataFrame(data)
 imputer = SimpleImputer(strategy='mean')
 df[['Age', 'Salary']] = imputer.fit_transform(df[['Age', 'Salary']])
 
-# Encoding Categorical Data
+## Encoding Categorical Data
 label_encoder = LabelEncoder()
 df['Purchased'] = label_encoder.fit_transform(df['Purchased'])
 
