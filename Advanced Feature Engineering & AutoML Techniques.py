@@ -43,7 +43,7 @@ import nasbench301 as nb
 # Initialize H2O
 h2o.init()
 
-# Example Dataset
+# Example Datasets
 data = {
     'Age': [25, 30, 35, np.nan, 40],
     'Salary': [50000, 60000, 70000, 80000, np.nan],
