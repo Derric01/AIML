@@ -34,6 +34,6 @@ Feature Engineering & Data Preprocessing
 
 Model Evaluation & Hyperparameter Tuning
 
-🌟 Contributing
+🍥 Contributing
 
 If you’d like to contribute or suggest improvements, feel free to open an issue or submit a pull request!!
