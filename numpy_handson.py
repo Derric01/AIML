@@ -8,7 +8,7 @@ for x in A:
     print(x, end=",")
 print()
 
-# Corrected definition of a 2D NumPy array
+# Corrected definition of a 2D NumPy arrays
 B = np.array([[1, 3, 4], [384, 34, 0], [33, 5, 6]])
 
 # Iterating through rows of the 2D array
